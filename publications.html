@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications</title>
+    <link rel="stylesheet" href="menu.css">
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+</head>
+
+<body>
+    <!-- Banner Image -->
+    <div class="banner">
+        <div class="profile-text">Publications</div>
+    </div>
+    
+    <!-- Hamburger Menu Icon -->
+    <div class="hamburger" id="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav class="menu" id="menu">
+        <ul>
+            <li class="menu-title">
+                Chaitanya<br>Patange
+            </li> <!-- Plain text with line break -->
+            
+            <li><a href="index.html">Profile</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#bio">Bio</a></li>
+            <li><a href="connect.html">Connect</a></li>
+
+            <!-- Dark Mode Toggle (Last item in the menu) -->
+            <li>
+                <a href="javascript:void(0);" id="darkModeButton">
+                    <span class="moon-icon">&#127769;</span> <!-- Moon icon for light mode -->
+                    <span class="sun-icon">&#127774;</span> <!-- Sun icon for dark mode -->
+                </a>
+            </li>
+        </ul>
+    </nav>
+    
+    <!-- Main content for publications -->
+    <div class="publications">
+        <h1>Paper Publications</h1>
+        <ul>
+            <li>
+                <a href="https://ieeexplore.ieee.org/document/10668338/" target="_blank">
+                    <strong>GNU Radio based Satellite Communication Tool</strong><br>
+                    2024 IEEE Space, Aerospace and Defence Conference (SPACE)
+                </a>
+            </li>
+            <li>
+                <a href="https://ieeexplore.ieee.org/document/10490573" target="_blank">
+                    <strong>Design of a Real-Time Tracking and Telemetry Parsing System for S-band Satellites</strong><br>
+                    2023 IEEE Asia-Pacific Conference on Geoscience, Electronics and Remote Sensing Technology (AGERS)
+                </a>
+            </li>
+            <li>
+                <a href="https://ieeexplore.ieee.org/document/10276156" target="_blank">
+                    <strong>Blur Removal and Image Merging for Image Enhancement on Python</strong><br>
+                    2023 International Conference on Network, Multimedia and Information Technology (NMITCON)
+                </a>
+            </li>
+            <li>
+                <a href="https://ieeexplore.ieee.org/document/10126330" target="_blank">
+                    <strong>Automated Handwriting Machine</strong><br>
+                    2023 IEEE 8th International Conference for Convergence in Technology (I2CT)
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Social Media Links -->
+    <div class="social-links">
+        <a href="https://www.linkedin.com/in/chaitanya-patange-b1b769220" class="linkedin-link" target="_blank">
+            <i class="fab fa-linkedin"></i>
+        </a>
+
+        <a href="https://github.com/ChaitanyaP28" class="github-link" target="_blank">
+            <i class="fab fa-github"></i>
+        </a>
+
+        <a href="https://scholar.google.com/citations?user=9bU9hJIAAAAJ&hl=en" class="scholar-link" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Google_Scholar_logo.svg/1200px-Google_Scholar_logo.svg.png" alt="Google Scholar">
+        </a>
+    </div>
+
+    <script src="menu.js"></script>
+    <script>
+        // Dark Mode Toggle Functionality
+        const darkModeButton = document.getElementById("darkModeButton");
+        const body = document.body;
+
+        darkModeButton.addEventListener("click", () => {
+            body.classList.toggle("dark-mode");
+        });
+    </script>
+</body>
+</html>

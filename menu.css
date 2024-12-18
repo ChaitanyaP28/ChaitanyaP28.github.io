@@ -67,7 +67,7 @@ body.dark-mode .right-side {
     left: 20px;
     z-index: 10;
     transition: transform 0.3s ease;
-    position: absolute;
+    position: fixed;
 }
 
 .line {
@@ -76,6 +76,17 @@ body.dark-mode .right-side {
     background-color: white; /* Default color */
     border-radius: 5px;
     transition: transform 0.3s ease;
+    mix-blend-mode: difference;
+}
+
+body.dark-mode .line {
+    background-color: #333; /* Darker lines in dark mode */
+    mix-blend-mode: difference; /* The color will be white if the background is dark */
+}
+
+/* To make sure it still contrasts well */
+body.dark-mode .hamburger .line {
+    background-color: white;
 }
 
 /* Change hamburger icon color to white when the menu is open */
@@ -478,6 +489,7 @@ body.dark-mode .publications li {
     .hamburger {
         top: 15px;
         left: 15px;
+        position: fixed;
     }
 
     .menu ul li a {
@@ -491,5 +503,9 @@ body.dark-mode .publications li {
     .scholar-link img {
         width: 23px; /* Reduce the size of the image */
         height: auto; /* Maintain aspect ratio */
+    }
+
+    .banner .profile-text {
+        font-size: 12vw; /* Slightly larger on smaller screens for better visibility */
     }
 }

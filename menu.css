@@ -8,12 +8,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Use min-height instead of height to avoid issues on mobile */
+    min-height: 10vh; /* Use min-height instead of height to avoid issues on mobile */
     text-align: center;
     flex-direction: column;
     transition: background-color 0.3s ease, color 0.3s ease;
     overflow-x: hidden;
-    
 }
 
 .main-content {
@@ -169,13 +168,12 @@ body.dark-mode .hamburger .line {
     line-height: 1.2; /* Adjusts the spacing between Chaitanya and Patange */
 }
 
-
 .banner {
     width: 100%;
     height: 300px;
     background-image: url('Pictures/Banner.jpg'); /* Path to your banner image */
     background-size: cover; /* Ensure the image covers the entire area */
-    background-position: center top; /* Focuses on the top of the image */
+    background-position: top; /* Focuses on the top of the image */
     background-repeat: no-repeat;
     position: relative;
     margin: 0; /* Remove margin to avoid white space at the top */
@@ -507,5 +505,13 @@ body.dark-mode .publications li {
 
     .banner .profile-text {
         font-size: 12vw; /* Slightly larger on smaller screens for better visibility */
+    }
+}
+    
+@media (max-width: 500px) {
+    .banner {
+        width: 55vh;
+        height: 300px;
+        background-size: cover; /* Ensure the image covers the entire area */
     }
 }

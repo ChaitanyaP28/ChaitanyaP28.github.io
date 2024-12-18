@@ -382,7 +382,6 @@ body.dark-mode .publications li {
 }
 
 /*----- CONNECT -----*/
-/*----- CONNECT -----*/
 /* Style for the Connect Section */
 .connect {
     text-align: center;
@@ -487,5 +486,10 @@ body.dark-mode .publications li {
 
     .social-links a {
         font-size: 24px;
+    }
+
+    .scholar-link img {
+        width: 23px; /* Reduce the size of the image */
+        height: auto; /* Maintain aspect ratio */
     }
 }

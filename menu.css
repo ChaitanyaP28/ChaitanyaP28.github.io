@@ -77,6 +77,16 @@ body.dark-mode .right-side {
     color: white; /* Change text color to white */
 }
 
+/* Dark Mode Styling for Header Text */
+body.dark-mode .header h1 {
+    color: white; /* Make header text white in dark mode */
+}
+
+body.dark-mode .header h2 {
+    color: lightgray; /* You can adjust the color for subheadings */
+}
+
+
 /* Hamburger menu icon */
 .hamburger {
     display: flex;

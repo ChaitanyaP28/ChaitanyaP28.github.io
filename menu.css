@@ -111,6 +111,10 @@ body.dark-mode .hamburger .line {
     background-color: white;
 }
 
+.hamburger.scrolled .line {
+    background-color: black; /* Color when scrolled down */
+}
+
 /* Change hamburger icon color to white when the menu is open */
 .hamburger.open .line {
     background-color: white;  /* Change line color to white */

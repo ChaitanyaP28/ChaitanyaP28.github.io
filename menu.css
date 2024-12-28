@@ -77,6 +77,16 @@ body.dark-mode .right-side {
     color: white; /* Change text color to white */
 }
 
+/* Dark Mode Styling for Header Text */
+body.dark-mode .header h1 {
+    color: white; /* Make header text white in dark mode */
+}
+
+body.dark-mode .header h2 {
+    color: lightgray; /* You can adjust the color for subheadings */
+}
+
+
 /* Hamburger menu icon */
 .hamburger {
     display: flex;
@@ -546,16 +556,17 @@ body.dark-mode .experience li {
 }
 
 
+
 /*----- Bio -----*/
 /* Experience Section */
-.Bio {
+.bio {
     display: flex;
     align-items: center; /* Vertically center the content */
     justify-content: center; /* Center horizontally */
     margin: 20px;
 }
 
-.Bio img {
+.bio img {
     width: 150px; /* Adjust the width to make the circle size appropriate */
     height: 150px; /* Keep the height the same as the width */
     object-fit: cover; /* Ensure the image fills the circle without distortion */
@@ -563,11 +574,18 @@ body.dark-mode .experience li {
     margin-right: 20px; /* Space between the image and the text */
 }
 
-.Bio h1 {
+.bio h1 {
     font-size: 24px;
     color: #333;
     margin-left: 20px; /* Space between image and heading */
 }
+
+/* Dark Mode Styling for Summary headings */
+body.dark-mode .bio h1, 
+body.dark-mode .bio li {
+    color: #fff; /* White color for headings in dark mode */
+}
+
 
 
 /* MOBILE */

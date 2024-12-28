@@ -518,47 +518,31 @@ body.dark-mode .connect h1 {
 
 /*----- Experience -----*/
 /* Experience Section */
-.experience{
-    max-width: 100%; /* Limit the width to a maximum of 800px */
-    margin: 20px auto; /* Center the summary on the page with margin */
-    padding: 0 20px; /* Add padding on both sides for spacing */
-    text-align: justify; /* Justify the text */
-    font-size: 18px; /* Font size for readability */
-    color: #555; /* Light grey color for text */
-    line-height: 1.6; /* Line spacing for readability */
+.experience {
+    display: flex;
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Center horizontally */
+    margin: 20px;
 }
 
+.experience img {
+    width: 150px; /* Adjust the width to make the circle size appropriate */
+    height: 150px; /* Keep the height the same as the width */
+    object-fit: cover; /* Ensure the image fills the circle without distortion */
+    border-radius: 50%; /* Makes the image circular */
+    margin-right: 20px; /* Space between the image and the text */
+}
+
+.experience h1 {
+    font-size: 24px;
+    color: #333;
+    margin-left: 20px; /* Space between image and heading */
+}
 
 /* Dark Mode Styling for Summary headings */
 body.dark-mode .experience h1, 
 body.dark-mode .experience li {
     color: #fff; /* White color for headings in dark mode */
-}
-
-.experience-content {
-    display: flex;
-    align-items: center; /* Center the image and text vertically */
-    justify-content: flex-start; /* Align the image and text next to each other */
-}
-
-.experience li img {
-    max-width: 70px; /* Use the variable for the image size */
-    height: auto; /* Maintain aspect ratio */
-    margin-left: 20px; /* Spacing between text and image */
-}
-
-.experience h1 {
-    font-size: 28px;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.experience li {
-    font-size: 20px;
-    color: #666; /* Default text color */
-    font-weight: normal;
-    margin-bottom: 15px; /* Add some space between each publication */
-    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for zoom and color change */
 }
 
 

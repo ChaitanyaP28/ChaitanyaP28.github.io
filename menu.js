@@ -26,6 +26,14 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    // Add event listener for notification click to open the menu
+    notification.addEventListener("click", () => {
+        // Trigger the same action as clicking the hamburger
+        menu.classList.add("show");
+        hamburger.classList.add("open");
+        notification.style.display = "none"; // Hide the notification when the menu is open
+    });
+
     // Close the menu when the close button is clicked
     if (closeBtn) {
         closeBtn.addEventListener("click", () => {

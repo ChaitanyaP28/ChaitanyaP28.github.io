@@ -28,6 +28,14 @@ body {
     display: none; /* Initially hidden */
     z-index: 9999;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: default; /* Default cursor, not clickable */
+    transition: background-color 0.3s ease;
+}
+
+/* Show arrow on hover */
+.notification:hover {
+    cursor: pointer; /* Change cursor to pointer when hovered */
+    background-color: #45a049; /* Slightly darker background on hover */
 }
 
 .main-content {

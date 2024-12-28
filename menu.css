@@ -397,20 +397,28 @@ body.dark-mode .publications li {
 
 .publications li {
     font-size: 20px;
-    color: #666;
+    color: #666; /* Default text color */
     font-weight: normal;
     margin-bottom: 15px; /* Add some space between each publication */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for zoom and color change */
 }
 
-.publications a {
+/* Zoom effect and text color change on hover for publications */
+.publications li:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Ensure color changes in the publication links */
+.publications li a {
     text-decoration: none; /* Removes the underline from links */
-    color: #666; /* Set default color */
+    color: inherit; /* Inherit the color of the li */
     font-weight: normal;
     transition: color 0.3s ease; /* Smooth transition for hover color */
 }
 
-.publications a:hover {
-    color: #0077b5; /* Change color on hover (you can choose any color) */
+/* Change color of text when hovering over the publication link */
+.publications li:hover a {
+    color: #0077b5; /* Change text color on hover (you can choose any color) */
 }
 
 

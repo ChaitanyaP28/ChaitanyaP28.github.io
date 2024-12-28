@@ -17,7 +17,7 @@ body {
 
 /* Notification style */
 .notification {
-    position: absolute;
+    position: fixed;
     top: 15px;
     left: 60px; /* Adjust this value to position the notification beside the hamburger menu */
     background-color: #4CAF50;

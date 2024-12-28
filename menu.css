@@ -270,10 +270,6 @@ body.dark-mode .github-link {
     filter: invert(1);
 }
 
-body.dark-mode .github-link:hover {
-    filter: invert(1);
-}
-
 /* Google Scholar */
 .scholar-link img {
     width: 50px; /* Larger size for Google Scholar icon */
@@ -287,7 +283,7 @@ body.dark-mode .github-link:hover {
 /* Icons for moon and sun toggle */
 .moon-icon, .sun-icon {
     display: none;
-    font-size: 32px;
+    font-size: 24px;
 }
 
 /* Display moon when in light mode */
@@ -390,6 +386,8 @@ body.dark-mode .publications li {
     color: #0077b5; /* Change color on hover (you can choose any color) */
 }
 
+
+
 /*----- CONNECT -----*/
 /* Style for the Connect Section */
 .connect {
@@ -397,6 +395,7 @@ body.dark-mode .publications li {
     margin-top: -30px; /* Further move the connect section up */
     padding: 20px;
 }
+
 
 .connect h1 {
     font-size: 4rem;  /* Significantly larger font size for the title */
@@ -423,19 +422,16 @@ body.dark-mode .publications li {
 .connect a {
     display: block;  /* Block display so each link appears on a new line */
     font-size: 2.5rem; /* Larger font size for the links */
-    color: #aaa; /* Default color (gray) */
     text-decoration: none;
     margin: 8px 0;  /* Reduced space between the links */
     padding: 12px;  /* Reduced padding */
     border-radius: 8px;
     transition: all 0.3s ease-in-out;  /* Smooth transition for hover effects */
-    filter: grayscale(100%); /* Make everything gray by default */
 }
 
 /* Hover effect for each link */
 .connect a:hover {
     background-color: #f4f4f4;
-    color: #0077b5; /* LinkedIn blue for hover */
     filter: grayscale(0%); /* Remove grayscale on hover */
     transform: scale(1.05); /* Slight zoom effect */
 }
@@ -448,22 +444,45 @@ body.dark-mode .publications li {
 }
 
 /* Specific color for LinkedIn, GitHub, Google Scholar, and IEEE Xplore */
-.connect .linkedin-link:hover {
+.connect .linkedin-link {
     color: #0077b5; /* LinkedIn blue */
 }
 
-.connect .github-link:hover {
+.connect .github-link {
     color: #333; /* GitHub black */
 }
 
-.connect .scholar-link:hover {
+.connect .scholar-link {
     color: #4285F4; /* Google Scholar blue */
 }
 
-.connect .ieee-xplore-link:hover {
+.connect .ieee-xplore-link {
     color: #009CDE; /* IEEE Xplore blue */
 }
 
+/* Additional links */
+.connect .hackerrank-link {
+    color: #00B551; /* HackerRank green */
+}
+
+.connect .leetcode-link {
+    color: #FF7F00; /* LeetCode orange */
+}
+
+.connect .unstop-link {
+    color: #003366; /* Unstop dark blue */
+}
+
+.connect .kaggle-link {
+    color: #20BEFF; /* Kaggle blue */
+}
+
+body.dark-mode .connect h1 {
+    color: #fff; /* White title in dark mode */
+}
+
+
+/* MOBILE */
 @media (max-width: 768px) {
     .profile-image {
         width: 100px;

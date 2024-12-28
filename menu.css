@@ -15,6 +15,21 @@ body {
     overflow-x: hidden;
 }
 
+/* Notification style */
+.notification {
+    position: absolute;
+    top: 15px;
+    left: 60px; /* Adjust this value to position the notification beside the hamburger menu */
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    display: none; /* Initially hidden */
+    z-index: 9999;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 .main-content {
     display: flex; 
     flex-wrap: wrap; 

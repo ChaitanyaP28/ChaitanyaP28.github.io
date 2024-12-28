@@ -47,14 +47,46 @@
             </li>
         </ul>
     </nav>
+<!-- Main content for publications -->
+<div class="experience">
+    <h1>Internships</h1>
+    <ul>
+        <li style="display: flex; align-items: center; list-style-type: disc; padding-left: 20px;">
+            <div style="flex-grow: 1;">
+                <strong>ISRO UR Rao Satellite Centre (URSC)</strong><br>
+            </div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Indian_Space_Research_Organisation_Logo.svg/794px-Indian_Space_Research_Organisation_Logo.svg.png" alt="ISRO Image">
+        </li>
 
-    <!-- Main content divided into two parts -->
-    <div class="Experience">
-        <img src="Pictures/working.gif">
-        <div>
-        <h1>Working On It</h1>
-        </div>
-    </div>
+        <li style="display: flex; align-items: center; list-style-type: disc; padding-left: 20px;">
+            <div style="flex-grow: 1;">
+                <strong>ISRO Telemetry, Tracking and Command Network (ISTRAC)</strong><br>
+            </div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Indian_Space_Research_Organisation_Logo.svg/794px-Indian_Space_Research_Organisation_Logo.svg.png" alt="ISRO Image">
+        </li>
+
+        <li style="display: flex; align-items: center; list-style-type: disc; padding-left: 20px;">
+            <div style="flex-grow: 1;">
+                <strong>Internship on IoT and ML conducted by Pantech E-Learning and STEP-NITK</strong><br>
+            </div>
+            <img src="https://media.licdn.com/dms/image/v2/C560BAQGoQXBPoU7wPA/company-logo_200_200/company-logo_200_200/0/1630575809943/pantechelearning_logo?e=2147483647&v=beta&t=kQH6XT8XQW-ezbEVz8D5Qn0kUV38DmhtF6NDYJPsnxg" alt="ISRO Image">
+        </li>
+
+        <li style="display: flex; align-items: center; list-style-type: disc; padding-left: 20px;">
+            <div style="flex-grow: 1;">
+                <strong>CSIR Fourth Paradigm Institute (CSIR4PI)</strong><br>
+            </div>
+            <img src="https://yt3.googleusercontent.com/-f1rftOXY48wS0l0lLzK1lwkR5k5kztNqGSlSCWbm6LHjANXzgB-fKSqEOHRHUpGLjBEF-UnPg=s900-c-k-c0x00ffffff-no-rj" alt="ISRO Image">
+        </li>
+
+        <li style="display: flex; align-items: center; list-style-type: disc; padding-left: 20px;">
+            <div style="flex-grow: 1;">
+                <strong>CSIR National Aerospace Labratories (CSIR-NAL)</strong><br>
+            </div>
+            <img src="https://upload.wikimedia.org/wikipedia/en/0/02/CSIR-National_Aerospace_Laboratories_Logo.png" alt="ISRO Image">
+        </li>
+    </ul>
+</div>
 
 
     <!-- Social Media Links -->
@@ -73,31 +105,5 @@
     </div>
 
     <script src="menu.js"></script>
-    <script>
-        // Check if dark mode is enabled in localStorage
-        const isDarkMode = localStorage.getItem('darkMode') === 'true';
-        const body = document.body;
-        const header = document.querySelector(".header h1");
-        const subHeader = document.querySelector(".header h2");
-
-        // Set the body class based on saved dark mode state
-        if (isDarkMode) {
-            body.classList.add("dark-mode");
-            header.classList.add("dark-mode");
-            subHeader.classList.add("dark-mode");
-        }
-
-        const darkModeButton = document.getElementById("darkModeButton");
-
-        darkModeButton.addEventListener("click", () => {
-            // Toggle dark mode
-            const darkModeActive = body.classList.toggle("dark-mode");
-            header.classList.toggle("dark-mode");
-            subHeader.classList.toggle("dark-mode");
-
-            // Save the dark mode state in localStorage
-            localStorage.setItem('darkMode', darkModeActive.toString());
-        });
-    </script>
 </body>
 </html>

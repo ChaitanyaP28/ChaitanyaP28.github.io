@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="menu.css">
     <!-- Font Awesome CDN for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    
 </head>
 
 <body>
@@ -98,8 +97,22 @@
         const darkModeButton = document.getElementById("darkModeButton");
         const body = document.body;
 
+        // Check for dark mode in localStorage on page load
+        window.addEventListener("load", () => {
+            if (localStorage.getItem("darkMode") === "true") {
+                body.classList.add("dark-mode");
+            }
+        });
+
         darkModeButton.addEventListener("click", () => {
             body.classList.toggle("dark-mode");
+
+            // Save the dark mode state to localStorage
+            if (body.classList.contains("dark-mode")) {
+                localStorage.setItem("darkMode", "true");
+            } else {
+                localStorage.setItem("darkMode", "false");
+            }
         });
     </script>
 </body>

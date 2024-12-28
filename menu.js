@@ -7,30 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const notifications = document.querySelectorAll(".notification");  // All notifications
     const banners = document.querySelectorAll(".banner");  // All banners/images to check for scroll
     const bannerHeights = Array.from(banners).map(banner => banner.offsetHeight);  // Heights of all banners
-    // Check if dark mode is enabled in localStorage
-    const isDarkMode = localStorage.getItem('darkMode') === 'true';
-    const body = document.body;
-    const header = document.querySelector(".header h1");
-    const subHeader = document.querySelector(".header h2");
 
-    // Set the body class based on saved dark mode state
-    if (isDarkMode) {
-        body.classList.add("dark-mode");
-        header.classList.add("dark-mode");
-        subHeader.classList.add("dark-mode");
-    }
-
-    const darkModeButton = document.getElementById("darkModeButton");
-
-    darkModeButton.addEventListener("click", () => {
-        // Toggle dark mode
-        const darkModeActive = body.classList.toggle("dark-mode");
-        header.classList.toggle("dark-mode");
-        subHeader.classList.toggle("dark-mode");
-
-        // Save the dark mode state in localStorage
-        localStorage.setItem('darkMode', darkModeActive.toString());
-    });
     // Show the notification when the page loads
     window.addEventListener("load", () => {
         notifications.forEach(notification => {

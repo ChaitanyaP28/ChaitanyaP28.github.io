@@ -274,8 +274,21 @@ body.dark-mode {
 }
 
 /* Social Icons */
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
 .social-links {
-    margin-top: 20px;
+    margin-top: auto;
+    text-align: center;
+    padding: 10px;
 }
 
 .social-links a {

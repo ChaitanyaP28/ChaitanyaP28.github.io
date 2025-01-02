@@ -518,7 +518,22 @@ body.dark-mode .publications li {
     color: #009CDE; /* IEEE Xplore blue */
 }
 
-/* Additional links */
+.connect .google-developer-link {
+    color: #4285F4; /* Google Blue */
+}
+
+.connect .cloud-skills-boost-link {
+    color: #FBBC05; /* Google Blue */
+}
+
+.connect .google-maps-link {
+    color: #34A853; /* Google Blue */
+}
+
+.connect .gmail-link {
+    color: #EA4335;  /* Google Blue */
+}
+
 .connect .hackerrank-link {
     color: #00B551; /* HackerRank green */
 }

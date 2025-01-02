@@ -490,7 +490,6 @@ body.dark-mode .publications li {
 /* Hover effect for each link */
 .connect a:hover {
     background-color: #f4f4f4;
-    filter: grayscale(0%); /* Remove grayscale on hover */
     transform: scale(1.05); /* Slight zoom effect */
 }
 
@@ -505,49 +504,99 @@ body.dark-mode .publications li {
 .connect .linkedin-link {
     color: #0077b5; /* LinkedIn blue */
 }
+.connect .linkedin-link:hover {
+    color: #005b8d;
+}
 
 .connect .github-link {
     color: #333; /* GitHub black */
+}
+.connect .github-link:hover {
+    color: #444; /* GitHub dark on hover */
 }
 
 .connect .scholar-link {
     color: #4285F4; /* Google Scholar blue */
 }
+.connect .scholar-link:hover {
+    color: #3367D6; /* Slightly darker blue on hover */
+}
 
 .connect .ieee-xplore-link {
     color: #009CDE; /* IEEE Xplore blue */
+}
+.connect .ieee-xplore-link:hover {
+    color: #007BB5; /* Slightly darker IEEE Xplore blue on hover */
 }
 
 .connect .google-developer-link {
     color: #4285F4; /* Google Blue */
 }
+.connect .google-developer-link:hover {
+    color: #3367D6; /* Slightly darker blue on hover */
+}
 
 .connect .cloud-skills-boost-link {
-    color: #FBBC05; /* Google Blue */
+    color: #FBBC05; /* Google Yellow */
+}
+.connect .cloud-skills-boost-link:hover {
+    color: #F8C400; /* Slightly darker yellow on hover */
 }
 
 .connect .google-maps-link {
-    color: #34A853; /* Google Blue */
+    color: #34A853; /* Google Green */
+}
+.connect .google-maps-link:hover {
+    color: #2D9E44; /* Slightly darker green on hover */
 }
 
 .connect .gmail-link {
-    color: #EA4335;  /* Google Blue */
+    color: #EA4335;  /* Google Red */
+}
+.connect .gmail-link:hover {
+    color: #D93025; /* Slightly darker red on hover */
 }
 
 .connect .hackerrank-link {
     color: #00B551; /* HackerRank green */
 }
+.connect .hackerrank-link:hover {
+    color: #009E4D; /* Darker green on hover */
+}
 
 .connect .leetcode-link {
     color: #FF7F00; /* LeetCode orange */
+}
+.connect .leetcode-link:hover {
+    color: #FF6A00; /* Slightly darker orange on hover */
 }
 
 .connect .unstop-link {
     color: #003366; /* Unstop dark blue */
 }
+.connect .unstop-link:hover {
+    color: #002B4A; /* Darker blue on hover */
+}
 
 .connect .kaggle-link {
     color: #20BEFF; /* Kaggle blue */
+}
+.connect .kaggle-link:hover {
+    color: #1A9BF5; /* Slightly darker Kaggle blue on hover */
+}
+
+.connect .gitlab-link {
+    color: #FCA326; /* GitLab Red */
+}
+.connect .gitlab-link:hover {
+    color: #F57C29; /* A lighter shade of GitLab red on hover */
+}
+
+.connect .hackerearth-link {
+    color: #005B5F; /* HackerEarth Blue */
+}
+.connect .hackerearth-link:hover {
+    color: #004A4C; /* Slightly darker HackerEarth blue on hover */
 }
 
 body.dark-mode .connect h1 {

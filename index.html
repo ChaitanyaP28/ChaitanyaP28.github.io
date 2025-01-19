@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chaitanya Patange</title>
+    
     <link rel="stylesheet" href="menu.css">
     <!-- Font Awesome CDN for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -12,15 +13,44 @@
 </head>
 
 <body>
-    <!-- Placeholder for dynamic menu -->
-
-
     <!-- Banner Image -->
     <div class="banner">
         <div class="profile-text">Profile</div>
     </div>
     
-    <div id="menu-placeholder"></div>
+    <div id="notification" class="notification">
+        Menu
+    </div>
+
+    <!-- Hamburger Menu Icon -->
+    <div class="hamburger" id="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav class="menu" id="menu">
+        <ul>
+            <li class="menu-title">
+                Chaitanya<br>Patange
+            </li> <!-- Plain text with line break -->
+            
+            <li><a href="index.html">Profile</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="bio.html">Bio</a></li>
+            <li><a href="connect.html">Connect</a></li>
+
+            <!-- Dark Mode Toggle (Last item in the menu) -->
+            <li>
+                <a href="javascript:void(0);" id="darkModeButton">
+                    <span class="moon-icon"> &#127769; </span> <!-- Moon icon for light mode -->
+                    <span class="sun-icon"> &#127774; </span> <!-- Sun icon for dark mode -->
+                </a>
+            </li>
+        </ul>
+    </nav>
 
     <!-- Main content divided into two parts -->
     <div class="main-content">
@@ -41,9 +71,7 @@
         <div class="right-side">
             <div class="summary">
                 <h1>Summary</h1>
-                <h2>
-                    I am a very curious person and like to try out new things. Passionate about implementing robotics in daily life. Skilled at hardware prototyping, with knowledge in IoT, Machine Learning, Image Processing, ROS, DBMS. I am Interested in Satellite Tracking and Decoding and Software Developments for Onboard Computers. I love to code and solve real-life problems.
-                </h2>
+                <h2>I am a very curious person and like to try out new things. Passionate about implementing robotics in daily life. Skilled at hardware prototyping, with knowledge in IoT, Machine Learning, Image Processing, ROS, DBMS. I am Interested in Satellite Tracking and Decoding and Software Developments for Onboard Computers. I love to code and solve real life problems.</h2>
             </div>
         </div>
     </div>
@@ -53,16 +81,17 @@
         <a href="https://www.linkedin.com/in/chaitanya-patange-b1b769220" class="linkedin-link" target="_blank">
             <i class="fab fa-linkedin"></i>
         </a>
+
         <a href="https://github.com/ChaitanyaP28" class="github-link" target="_blank">
             <i class="fab fa-github"></i>
         </a>
+
         <a href="https://scholar.google.com/citations?user=9bU9hJIAAAAJ&hl=en" class="scholar-link" target="_blank">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Google_Scholar_logo.svg/1200px-Google_Scholar_logo.svg.png" alt="Google Scholar">
         </a>
     </div>
 
-    <!-- Fetch and dynamically load the menu -->
     <script src="menu.js"></script>
-</body>
 
+</body>
 </html>

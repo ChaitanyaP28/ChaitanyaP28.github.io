@@ -25,6 +25,7 @@ body {
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 14px;
+    display: none; /* Initially hidden */
     z-index: 9999;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     cursor: default; /* Default cursor, not clickable */
@@ -36,7 +37,6 @@ body {
     cursor: pointer; /* Change cursor to pointer when hovered */
     background-color: #45a049; /* Slightly darker background on hover */
 }
-
 
 .main-content {
     display: flex; 
@@ -146,7 +146,6 @@ body.dark-mode .hamburger .line {
     transform: rotate(-45deg); /* Rotate -45deg */
     transform-origin: bottom left;  /* Rotate from bottom-left corner */
 }
-
 
 /* Navigation menu (hidden by default) */
 .menu {

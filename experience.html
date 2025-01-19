@@ -17,49 +17,78 @@
         <div class="profile-text">Experience</div>
     </div>
     
-    <!-- Placeholder for Menu -->
-    <div id="menu-placeholder"></div>
 
-    <!-- Main content for Experience -->
-    <div class="experience">
-        <h1>Internships</h1>
+    <!-- Hamburger Menu Icon -->
+    <div class="hamburger" id="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav class="menu" id="menu">
         <ul>
-            <li style="display: flex; align-items: center; list-style-type: disc; padding-left: 20px;">
-                <div style="flex-grow: 1;">
-                    <strong>ISRO UR Rao Satellite Centre (URSC)</strong><br>
-                </div>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Indian_Space_Research_Organisation_Logo.svg/794px-Indian_Space_Research_Organisation_Logo.svg.png" alt="ISRO Image">
-            </li>
+            <li class="menu-title">
+                Chaitanya<br>Patange
+            </li> <!-- Plain text with line break -->
+            
+            <li><a href="index.html">Profile</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="bio.html">Bio</a></li>
+            <li><a href="connect.html">Connect</a></li>
 
-            <li style="display: flex; align-items: center; list-style-type: disc; padding-left: 20px;">
-                <div style="flex-grow: 1;">
-                    <strong>ISRO Telemetry, Tracking and Command Network (ISTRAC)</strong><br>
-                </div>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Indian_Space_Research_Organisation_Logo.svg/794px-Indian_Space_Research_Organisation_Logo.svg.png" alt="ISRO Image">
-            </li>
-
-            <li style="display: flex; align-items: center; list-style-type: disc; padding-left: 20px;">
-                <div style="flex-grow: 1;">
-                    <strong>Internship on IoT and ML conducted by Pantech E-Learning and STEP-NITK</strong><br>
-                </div>
-                <img src="https://media.licdn.com/dms/image/v2/C560BAQGoQXBPoU7wPA/company-logo_200_200/company-logo_200_200/0/1630575809943/pantechelearning_logo?e=2147483647&v=beta&t=kQH6XT8XQW-ezbEVz8D5Qn0kUV38DmhtF6NDYJPsnxg" alt="Pantech Image">
-            </li>
-
-            <li style="display: flex; align-items: center; list-style-type: disc; padding-left: 20px;">
-                <div style="flex-grow: 1;">
-                    <strong>CSIR Fourth Paradigm Institute (CSIR-4PI)</strong><br>
-                </div>
-                <img src="https://yt3.googleusercontent.com/-f1rftOXY48wS0l0lLzK1lwkR5k5kztNqGSlSCWbm6LHjANXzgB-fKSqEOHRHUpGLjBEF-UnPg=s900-c-k-c0x00ffffff-no-rj" alt="CSIR Image">
-            </li>
-
-            <li style="display: flex; align-items: center; list-style-type: disc; padding-left: 20px;">
-                <div style="flex-grow: 1;">
-                    <strong>CSIR National Aerospace Laboratories (CSIR-NAL)</strong><br>
-                </div>
-                <img src="https://upload.wikimedia.org/wikipedia/en/0/02/CSIR-National_Aerospace_Laboratories_Logo.png" alt="NAL Image">
+            <!-- Dark Mode Toggle (Last item in the menu) -->
+            <li>
+                <a href="javascript:void(0);" id="darkModeButton">
+                    <span class="moon-icon"> &#127769; </span> <!-- Moon icon for light mode -->
+                    <span class="sun-icon"> &#127774; </span> <!-- Sun icon for dark mode -->
+                </a>
             </li>
         </ul>
-    </div>
+    </nav>
+
+<!-- Main content for publications -->
+<div class="experience">
+    <h1>Internships</h1>
+    <ul>
+        <li style="display: flex; align-items: center; list-style-type: disc; padding-left: 20px;">
+            <div style="flex-grow: 1;">
+                <strong>ISRO UR Rao Satellite Centre (URSC)</strong><br>
+            </div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Indian_Space_Research_Organisation_Logo.svg/794px-Indian_Space_Research_Organisation_Logo.svg.png" alt="ISRO Image">
+        </li>
+
+        <li style="display: flex; align-items: center; list-style-type: disc; padding-left: 20px;">
+            <div style="flex-grow: 1;">
+                <strong>ISRO Telemetry, Tracking and Command Network (ISTRAC)</strong><br>
+            </div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Indian_Space_Research_Organisation_Logo.svg/794px-Indian_Space_Research_Organisation_Logo.svg.png" alt="ISRO Image">
+        </li>
+
+        <li style="display: flex; align-items: center; list-style-type: disc; padding-left: 20px;">
+            <div style="flex-grow: 1;">
+                <strong>Internship on IoT and ML conducted by Pantech E-Learning and STEP-NITK</strong><br>
+            </div>
+            <img src="https://media.licdn.com/dms/image/v2/C560BAQGoQXBPoU7wPA/company-logo_200_200/company-logo_200_200/0/1630575809943/pantechelearning_logo?e=2147483647&v=beta&t=kQH6XT8XQW-ezbEVz8D5Qn0kUV38DmhtF6NDYJPsnxg" alt="ISRO Image">
+        </li>
+
+        <li style="display: flex; align-items: center; list-style-type: disc; padding-left: 20px;">
+            <div style="flex-grow: 1;">
+                <strong>CSIR Fourth Paradigm Institute (CSIR-4PI)</strong><br>
+            </div>
+            <img src="https://yt3.googleusercontent.com/-f1rftOXY48wS0l0lLzK1lwkR5k5kztNqGSlSCWbm6LHjANXzgB-fKSqEOHRHUpGLjBEF-UnPg=s900-c-k-c0x00ffffff-no-rj" alt="ISRO Image">
+        </li>
+
+        <li style="display: flex; align-items: center; list-style-type: disc; padding-left: 20px;">
+            <div style="flex-grow: 1;">
+                <strong>CSIR National Aerospace Labratories (CSIR-NAL)</strong><br>
+            </div>
+            <img src="https://upload.wikimedia.org/wikipedia/en/0/02/CSIR-National_Aerospace_Laboratories_Logo.png" alt="ISRO Image">
+        </li>
+    </ul>
+</div>
+
 
     <!-- Social Media Links -->
     <div class="social-links">

@@ -161,13 +161,15 @@ body.dark-mode .hamburger .line {
     align-items: flex-start;
     z-index: 9;
     flex-direction: column;
-    transition: left 0.3s ease; /* Sliding effect */
+    transition: left 0.3s ease-out, opacity 0.3s ease-out;
     padding-top: 60px;  /* Added padding to prevent overlap with menu items */
+    opacity: 0;  /* Initially hidden */
 }
 
 /* Show the menu when .show class is added */
 .menu.show {
     left: 0;  /* Slide the menu into view from the left */
+    opacity: 1;  /* Make the menu visible */
 }
 
 /* Styling for the menu items */
@@ -204,6 +206,7 @@ body.dark-mode .hamburger .line {
     text-align: center; 
     color: white; /* Always keep the text white */
     line-height: 1.2; /* Adjusts the spacing between Chaitanya and Patange */
+    margin-bottom: 40px; /* Added spacing after the title */
 }
 
 .banner {

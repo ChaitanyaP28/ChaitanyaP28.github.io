@@ -686,8 +686,6 @@ body.dark-mode .bio li {
 /*----- Events -----*/
 .event {
     max-width: 100%;
-    margin: 20px auto;
-    padding: 0 20px;
     text-align: left;
     font-size: 18px;
     color: #555;
@@ -718,6 +716,7 @@ body.dark-mode .event li {
     cursor: pointer;
     user-select: none;
     position: relative;
+    line-height: 1.4;
 }
 
 /* Hover Effect */
@@ -844,6 +843,18 @@ body.dark-mode .event-description {
     .event-description {
         padding: 5px;
     }
+
+    .event-container {
+        width: 95%;
+        max-width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0px auto;
+        padding: 0px;
+        border-radius: 0px;
+    }
+
 }
     
 @media (max-width: 500px) {

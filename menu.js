@@ -131,7 +131,7 @@ parsedData.data.slice(1).forEach(row => {
     const description = row[1] || 'No description available';  // Description is in the B column (row[1])
 
     // Only add bullet point to the content inside (not headings)
-    if (row[0] === "Workshop & I/O Courses" || row[0] === "Capture the Flag (CTF)" || row[0] === "Hackathons Participated") {
+    if (row[0] === "Workshops & I/O Courses:" || row[0] === "Capture the Flag (CTF):" || row[0] === "Hackathons Participated:") {
         output += `<h1 class="event-heading">
                       ${displayText}
                    </h1>`;

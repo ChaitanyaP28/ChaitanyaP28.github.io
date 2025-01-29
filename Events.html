@@ -9,6 +9,7 @@
     <!-- Font Awesome CDN for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="icon" href="Pictures/Logo.png" type="image/png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
 </head>
 
 <body>
@@ -19,12 +20,13 @@
 
     <!-- Placeholder for Menu -->
     <div id="menu-placeholder"></div>
+    
+    <div class="event-container">
+        <div class="event">
+            <div id="loading-spinner">Loading...</div>
 
-    <!-- Main content divided into two parts -->
-    <div class="bio">
-        <img src="Pictures/working.gif">
-        <div>
-            <h1>Coming in Sometime</h1>
+            <!-- Display Google Sheets Data here -->
+            <div id="sheetData">Loading Google Sheets Data...</div>
         </div>
     </div>
 
@@ -44,6 +46,5 @@
     </div>
 
     <script src="menu.js"></script>
-
 </body>
 </html>

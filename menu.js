@@ -100,3 +100,86 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .catch((error) => console.error("Error loading menu:", error));
 });
+
+
+
+
+async function fetchSheetData() {
+    const sheetURL = "https://docs.google.com/spreadsheets/d/1OFFfj_q58ERHS-C4vS7PJnaNacFTc7W2gZyRmjr77sA/gviz/tq?tqx=out:csv&gid=723501588";
+    
+    // Show loading spinner while fetching data
+    document.getElementById("loading-spinner").style.display = 'block';
+    document.getElementById("sheetData").style.display = 'none';
+
+    try {
+        const response = await fetch(sheetURL);
+        if (!response.ok) throw new Error('Network response was not ok');
+        const data = await response.text();
+        
+        // Use PapaParse to parse the CSV data
+        const parsedData = Papa.parse(data, {
+            skipEmptyLines: true,  // Skip empty rows
+            dynamicTyping: true,    // Automatically detect data types
+            header: false           // Don't treat the first row as a header
+});
+
+let output = "";
+
+parsedData.data.slice(1).forEach(row => {
+    // Use only the first column (A column) for the event name
+    const displayText = row[0];  // Only the name from column A
+    const description = row[1] || 'No description available';  // Description is in the B column (row[1])
+
+    // Only add bullet point to the content inside (not headings)
+    if (row[0] === "Workshop & I/O Courses" || row[0] === "Capture the Flag (CTF)" || row[0] === "Hackathons Participated") {
+        output += `<h1 class="event-heading">
+                      ${displayText}
+                   </h1>`;
+    } else {
+        output += `<ul>
+                      <li class="event-item" onclick="toggleDescription(this)">
+                          ${displayText}
+                          <i class="fas fa-chevron-right toggle-arrow"></i>
+                      </li>
+                      <div class="event-description">${description}</div>
+                   </ul>`;
+    }
+});
+
+// Hide loading spinner and display the sheet data
+document.getElementById("loading-spinner").style.display = 'none';
+document.getElementById("sheetData").style.display = 'block';
+document.getElementById("sheetData").innerHTML = output;
+
+} catch (error) {
+document.getElementById("loading-spinner").style.display = 'none';
+document.getElementById("sheetData").innerHTML = "Failed to load data. Please try again later.";
+console.error('There was an error fetching the sheet data:', error);
+}
+}
+
+// Function to toggle the visibility of event description and rotate the arrow
+function toggleDescription(element) {
+    // Get all descriptions and arrows
+    const allDescriptions = document.querySelectorAll('.event-description');
+    const allArrows = document.querySelectorAll('.toggle-arrow');
+
+    // Get the clicked description and arrow
+    const description = element.closest('li').nextElementSibling;
+    const arrow = element.querySelector('.toggle-arrow');
+
+    // Check if the clicked description is already open
+    const isAlreadyOpen = description.style.display === 'block';
+
+    // Close all descriptions and reset arrows
+    allDescriptions.forEach(desc => desc.style.display = 'none');
+    allArrows.forEach(arr => arr.classList.remove('rotate'));
+
+    // Toggle the clicked description only if it was not already open
+    if (!isAlreadyOpen) {
+        description.style.display = 'block';
+        arrow.classList.add('rotate');
+    }
+}
+
+document.addEventListener("DOMContentLoaded", fetchSheetData);

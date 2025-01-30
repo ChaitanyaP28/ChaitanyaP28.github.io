@@ -101,9 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .catch((error) => console.error("Error loading menu:", error));
 });
 
-
-
-
+/*----- Events -----*/
 async function fetchSheetData() {
     const sheetURL = "https://docs.google.com/spreadsheets/d/1OFFfj_q58ERHS-C4vS7PJnaNacFTc7W2gZyRmjr77sA/gviz/tq?tqx=out:csv&gid=723501588";
     
@@ -183,3 +181,83 @@ function toggleDescription(element) {
 }
 
 document.addEventListener("DOMContentLoaded", fetchSheetData);
+
+
+/*----- Projects -----*/
+async function fetchProjectData() {
+    const sheetURL = "https://docs.google.com/spreadsheets/d/1OFFfj_q58ERHS-C4vS7PJnaNacFTc7W2gZyRmjr77sA/gviz/tq?tqx=out:csv&gid=198575720";
+    
+    // Show loading spinner while fetching data
+    document.getElementById("loading-spinner").style.display = 'block';
+    document.getElementById("projectData").style.display = 'none';
+
+    try {
+        const response = await fetch(sheetURL);
+        if (!response.ok) throw new Error('Network response was not ok');
+        const data = await response.text();
+        
+        // Use PapaParse to parse the CSV data
+        const parsedData = Papa.parse(data, {
+            skipEmptyLines: true,  // Skip empty rows
+            dynamicTyping: true,    // Automatically detect data types
+            header: false           // Don't treat the first row as a header
+        });
+
+        let output = "";
+
+        // Loop through rows and stop at the first row with null value
+        for (let i = 1; i < parsedData.data.length; i++) {
+            const row = parsedData.data[i];
+            const projectName = row[0];
+            if (!projectName) break;  // Stop loop when a row with null project name is reached
+
+            const description = row[1] || 'No description available';
+
+            // Add project name and description to the output
+            output += `<ul>
+                          <li class="project-item" onclick="toggleProjectDescription(this)">
+                              ${projectName}
+                              <i class="fas fa-chevron-right toggle-arrow"></i>
+                          </li>
+                          <div class="project-description">${description}</div>
+                       </ul>`;
+        }
+
+        // Hide loading spinner and display the project data
+        document.getElementById("loading-spinner").style.display = 'none';
+        document.getElementById("projectData").style.display = 'block';
+        document.getElementById("projectData").innerHTML = output;
+
+    } catch (error) {
+        document.getElementById("loading-spinner").style.display = 'none';
+        document.getElementById("projectData").innerHTML = "Failed to load data. Please try again later.";
+        console.error('There was an error fetching the project data:', error);
+    }
+}
+
+// Function to toggle the visibility of project description and rotate the arrow
+function toggleProjectDescription(element) {
+    // Get all descriptions and arrows
+    const allDescriptions = document.querySelectorAll('.project-description');
+    const allArrows = document.querySelectorAll('.toggle-arrow');
+
+    // Get the clicked description and arrow
+    const description = element.closest('li').nextElementSibling;
+    const arrow = element.querySelector('.toggle-arrow');
+
+    // Check if the clicked description is already open
+    const isAlreadyOpen = description.style.display === 'block';
+
+    // Close all descriptions and reset arrows
+    allDescriptions.forEach(desc => desc.style.display = 'none');
+    allArrows.forEach(arr => arr.classList.remove('rotate'));
+
+    // Toggle the clicked description only if it was not already open
+    if (!isAlreadyOpen) {
+        description.style.display = 'block';
+        arrow.classList.add('rotate');
+    }
+}
+
+document.addEventListener("DOMContentLoaded", fetchProjectData);
+

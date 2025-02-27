@@ -104,6 +104,79 @@ document.addEventListener("DOMContentLoaded", () => {
 /*----- Events -----*/
 async function fetchSheetData() {
     const sheetURL = "https://docs.google.com/spreadsheets/d/1OFFfj_q58ERHS-C4vS7PJnaNacFTc7W2gZyRmjr77sA/gviz/tq?tqx=out:csv&gid=723501588";
+
+    // Show loading spinner while fetching data
+    document.getElementById("loading-spinner").style.display = 'block';
+    document.getElementById("sheetData").style.display = 'none';
+
+    try {
+        const response = await fetch(sheetURL);
+        if (!response.ok) throw new Error('Network response was not ok');
+        const data = await response.text();
+
+        // Parse CSV data
+        const parsedData = Papa.parse(data, {
+            skipEmptyLines: true,
+            dynamicTyping: true,
+            header: false,
+            quotes: true
+        });
+
+        let output = "<ul>"; // Start unordered list
+
+        parsedData.data.slice(1).forEach(row => {
+            const eventName = row[0]?.trim() || "Unnamed Event"; // Column A: Event name
+            const description = (row[1] || "No description available").replace(/\n/g, "<br>"); // Column B: Description (Handle newlines)
+
+            // Check if row contains a category heading
+            if (["Workshops & I/O Courses:", "Capture the Flag (CTF):", "Hackathons Participated:"].includes(eventName)) {
+                output += `</ul><h1 class="event-heading">${eventName}</h1><ul>`; // Close previous list and start a new section
+            } else {
+                output += `
+                    <li class="event-item" onclick="toggleDescription(this)">
+                        ${eventName}
+                        <i class="fas fa-chevron-right toggle-arrow"></i>
+                    </li>
+                    <div class="event-description">${description}</div>
+                `;
+            }
+        });
+
+        output += "</ul>"; // Close the last unordered list
+
+        // Hide loading spinner and display the sheet data
+        document.getElementById("loading-spinner").style.display = 'none';
+        document.getElementById("sheetData").style.display = 'block';
+        document.getElementById("sheetData").innerHTML = output;
+
+    } catch (error) {
+        document.getElementById("loading-spinner").style.display = 'none';
+        document.getElementById("sheetData").innerHTML = "Failed to load data. Please try again later.";
+        console.error("There was an error fetching the sheet data:", error);
+    }
+}
+
+// Function to toggle event descriptions
+function toggleDescription(element) {
+    const description = element.nextElementSibling;
+    if (description.style.display === "block") {
+        description.style.display = "none";
+        element.querySelector(".toggle-arrow").classList.remove("fa-chevron-down");
+        element.querySelector(".toggle-arrow").classList.add("fa-chevron-right");
+    } else {
+        description.style.display = "block";
+        element.querySelector(".toggle-arrow").classList.remove("fa-chevron-right");
+        element.querySelector(".toggle-arrow").classList.add("fa-chevron-down");
+    }
+}
+
+// Call function to load data
+fetchSheetData();
+
+/*
+OLD FUNCTION
+async function fetchSheetData() {
+    const sheetURL = "https://docs.google.com/spreadsheets/d/1OFFfj_q58ERHS-C4vS7PJnaNacFTc7W2gZyRmjr77sA/gviz/tq?tqx=out:csv&gid=723501588";
     
     // Show loading spinner while fetching data
     document.getElementById("loading-spinner").style.display = 'block';
@@ -155,6 +228,7 @@ document.getElementById("sheetData").innerHTML = "Failed to load data. Please tr
 console.error('There was an error fetching the sheet data:', error);
 }
 }
+*/
 
 // Function to toggle the visibility of event description and rotate the arrow
 function toggleDescription(element) {

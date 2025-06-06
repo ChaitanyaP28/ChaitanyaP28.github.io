@@ -943,6 +943,20 @@ body.dark-mode .project-description {
     width: 100%;
 }
 
+body.dark-mode .leetcode-light {
+    display: none !important;
+}
+body.dark-mode .leetcode-dark {
+    display: inline !important;
+}
+
+/* Default: show light icon and hide dark icon */
+.leetcode-light {
+    display: inline !important;
+}
+.leetcode-dark {
+    display: none !important;
+}
 
 
 
